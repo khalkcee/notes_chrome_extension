@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Sticky Note",
+  "description": "A sticky note that stays on top of any tab you open.",
+  "version": "1.0",
+
+  "permissions": ["storage"],
+  "action": {
+    "default_popup": "popup.html"
+    
+  },
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["content.js"]
+  }],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
